@@ -1,0 +1,38 @@
+<section>
+    <div class="input-group mb-3">
+        <br/>
+        <table>
+            <tr>
+                <td>
+                    <input type="text" class="form-control" placeholder="Enter Name" id="txtUser">
+                </td>
+                <td>
+                    &nbsp;<button type="button" data-bind="click: function () { setname(); }" class="btn btn-primary">Display Name</button>
+                </td>
+                <td>
+                    &nbsp;<button type="button" data-bind="click: function () { showtime(); }" class="btn btn-primary">Current Time</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="GridContainer p-b-20">
+        <h1>Grid</h1>
+        <div class="row">
+            <div class="col-sm-6" style="background-color:yellow;">Name</div>
+            <div class="col-sm-6" style="background-color:pink;">Amount</div>
+        </div>
+        <div id="grid1" class="row" data-bind="foreach: myGridRows">
+            <div class="col-sm-6" style="background-color:lightgray;" data-bind="text: $data.Name"></div>
+            <div class="col-sm-6" style="background-color:lightgray;" data-bind="text: $data.Amount"></div>
+        </div>
+    </div>
+    <div class="MonthsContainer p-b-20">
+        <h1>Months of the year</h1>
+        <ul data-bind="foreach: myMonths">
+            <li>
+                <b data-bind="text: $data"></b>
+            </li>
+        </ul>
+    </div>
+</section>
+
